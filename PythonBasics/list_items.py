@@ -10,5 +10,5 @@ for files in list_directory: # print each directory and file founded
 for root, directories, files in os.walk(".",topdown=False):
     for file_entry in files:
         print("[-]", os.path.join(root,file_entry))
-    for name in directories:
-        print("[--]", name)
+    for directory in directories:
+        print("[--]", directory)

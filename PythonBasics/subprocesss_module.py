@@ -1,10 +1,17 @@
-from asyncio import subprocess
-from subprocess import call, Popen
+import subprocess
+import sys
 
-"""
-    Invoke and communicate with Python processes
-"""
+# if you want to use in Linux
+# com_ping = /bin/ping
+# param_ping = '-c 1'
 
-process = Popen(["python","--version"])
-print(process.stdout())
-process.terminate()
+com_ping = 'ping'
+param_ping = '-n'
+packet = 1
+target = "nsa.gov"
+
+p = subprocess.Popen([com_ping,param_ping,str(packet), target],shell=False, stderr=subprocess.PIPE)
+
+out = p.stderr.read(1)
+sys.stdout.write(str(out.decode('utf-8')))
+sys.stdout.flush()
