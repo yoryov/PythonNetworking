@@ -1,7 +1,6 @@
 import socket
 
-target = "example.com"
-ip = "93.184.216.34"
+target = "facebook.com"
 
 try:
     print("[*] IP from the Host: ", socket.gethostbyname(target))
@@ -11,3 +10,7 @@ try:
     print("[*] Target information: ", socket.getaddrinfo(target,None,0,socket.SOCK_STREAM))
 except socket.error as er:
     print("[-] Connection error",str(er))
+
+
+# socket.getservbyname('http')
+# socket.getservbyport(80)
