@@ -1,10 +1,10 @@
 import requests
 import re
 
-url = input("URL: ")
+url = "https://www.python.org"
 var = requests.get(url).text
-print(var)
-for link in re.findall("<a (.*)></a>",var):
+#print(var)
+for link in re.findall("<a href=\"https://(.*).python.org\">",var):
     print(link)
 """
 
