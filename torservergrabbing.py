@@ -1,5 +1,5 @@
 # Remember to start a Tor connection, port 9050 with the SOCKS protocol, 
-# If you have WSL is possible to install tor and set up a Tor connection through there
+# If you have WSL is possible to install tor and set up a Tor connection through there 
 
 import requests
 
@@ -19,7 +19,7 @@ def torconnection():
     return session
 
 session = torconnection()
-print("Tor IP:", session.get("https://httpbin.org/ip").text)
+print("Tor IP:", session.get("https://ipecho.net/plain").text)
 for torsite in tor_sites:
     try:
         response = session.get(torsite)
