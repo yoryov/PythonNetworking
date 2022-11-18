@@ -1,4 +1,6 @@
-# from bs4 import BeautifulSoup
+# Remember to start a Tor connection, port 9050 with the SOCKS protocol, 
+# If you have WSL is possible to install tor and set up a Tor connection through there
+
 import requests
 
 tor_sites = ['http://y22arit74fqnnc2pbieq3wqqvkfub6gnlegx3cl6thclos4f7ya7rvad.onion/',
