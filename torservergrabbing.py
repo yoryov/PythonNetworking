@@ -4,7 +4,7 @@
 import requests
 
 tor_sites = ['http://y22arit74fqnnc2pbieq3wqqvkfub6gnlegx3cl6thclos4f7ya7rvad.onion/',
-            'http://s4k4ceiapwwgcm3mkb6e4diqecpo7kvdnfr5gg7sph7jjppqkvwwqtyd.onion/',
+            'http://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/',
             'http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/',
             'http://6nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqxzqd.onion/',
             'http://jgwe5cjqdbyvudjqskaajbfibfewew4pndx52dye7ug3mt3jimmktkid.onion/'
@@ -22,10 +22,11 @@ session = torconnection()
 print("Tor IP:", session.get("https://ipecho.net/plain").text)
 for torsite in tor_sites:
     try:
+        
         response = session.get(torsite)
         for key,value in response.headers.items():
             if key == 'Server':
-                print("[*]",key,value)
+                print("[*]",key,value, "running on", torsite)
     except Exception as e:
         print("[-]An Error ocurred \n" + str(e))
 
