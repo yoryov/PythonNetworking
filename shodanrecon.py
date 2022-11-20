@@ -1,3 +1,5 @@
+# Make sure to control your credits at https://developer.shodan.io/dashboard :p
+
 import shodan
 import os
 import sys
