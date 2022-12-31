@@ -1,5 +1,6 @@
 # Remember to start a Tor connection, port 9050 with the SOCKS protocol, 
-# If you have WSL is possible to install tor and set up a Tor connection through there 
+# If you have WSL is possible to install tor and set up a Tor connection through there
+# You can check the status of tor within Linux with a "systemctl status tor"
 
 import requests
 
