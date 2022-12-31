@@ -2,6 +2,8 @@ import shodan
 import re
 import os
 
+# Remember to store securely your SHODAN API Key
+
 SHODAN_KEY = os.environ['shodanapikey']
 recon = shodan.Shodan(SHODAN_KEY)
 
